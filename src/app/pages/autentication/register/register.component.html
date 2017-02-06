@@ -1,0 +1,21 @@
+<md-card class="example-card" [@slideUp]="'true'">
+  <h2>Firebase Register</h2>
+  <hr>
+  <form #signUpForm="ngForm" (ngSubmit)="onSignUpWithEmail(signUpForm)" class="example-form">
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="email@gmail.com" type="email" name="email" ngModel required>
+    </md-input-container>
+    <br>
+    <md-input-container class="example-full-width">
+      <input md-input type="password" placeholder="Password" name="password" ngModel required>
+    </md-input-container>
+    <br>
+    <div class="text-center">
+      <button md-raised-button type="submit" color="primary">Register</button>
+      <p *ngIf="error" class="error-text">{{errorMessage}}</p>
+    </div>
+  </form>
+</md-card>
+
+
+

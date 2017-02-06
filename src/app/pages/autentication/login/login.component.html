@@ -1,0 +1,31 @@
+<md-card class="example-card"  [@slideUp]="'true'">
+  <h2>Firebase Login</h2>
+  <hr>
+
+  <form *ngIf="!isLoading" class="example-form" #signInForm="ngForm" (ngSubmit)="onSigninWithEmail(signInForm)">
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="email@gmail.com" type="email" name="email" ngModel required>
+    </md-input-container>
+
+    <br>
+
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Password" type="password" name="password" ngModel required>
+    </md-input-container>
+    <br>
+    <div class="text-center">
+      <button md-raised-button color="primary" type="submit">Login</button>
+      <p *ngIf="error" class="error-text">{{errorMessage}}</p>
+    </div>
+    <div class="text-center newAccount">
+      <a  [routerLink]="['/register']">Create an account</a>
+    </div>
+  </form>
+
+  <div *ngIf="isLoading" class="text-center">
+    <md-progress-spinner mode="indeterminate" color="primary">Loading</md-progress-spinner>
+  </div>
+
+</md-card>
+
+
