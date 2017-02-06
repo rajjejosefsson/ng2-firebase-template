@@ -1,5 +1,7 @@
 # r-ng2-firebase-template
 
+DEMO: <a href="http://r-ng2-template.azurewebsites.net/login">r-ng2-template</a>
+
 <p>
    <img src="https://github.com/rajjejosefsson/ng2-firebase-template/blob/master/src/assets/home.png" width="250"/>
   
